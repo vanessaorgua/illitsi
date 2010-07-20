@@ -466,6 +466,45 @@ QCheckBox:indicator
     <enum>QFrame::Raised</enum>
    </property>
   </widget>
+  <widget class="QPushButton" name="bnCall_1">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>100</y>
+     <width>97</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Управління</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bnCall_2">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>100</y>
+     <width>97</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Управління</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bnCall_3">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>100</y>
+     <width>97</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Управління</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="mnemo/mnemo.qrc"/>

@@ -12,21 +12,27 @@ HEADERS += mainform.h \
     about.h \
     history.h \
     alertviewdialog.h \
-    apone.h
+    apone.h \
+    dlgapone.h \
+    dlgapsetup.h
 FORMS += mainform.ui \
     mnemo.ui \
     sparamdialog.ui \
     about.ui \
     history.ui \
     alertviewdialog.ui \
-    apone.ui
+    apone.ui \
+    dlgapone.ui \
+    dlgapsetup.ui
 SOURCES += main.cpp \
     mainform.cpp \
     mnemo.cpp \
     sparamdialog.cpp \
     history.cpp \
     alertviewdialog.cpp \
-    apone.cpp
+    apone.cpp \
+    dlgapone.cpp \
+    dlgapsetup.cpp
 RESOURCES += mnemo/mnemo.qrc \
     ../../../lib/picture.qrc \
     ../../../pict/lib/valves.qrc \

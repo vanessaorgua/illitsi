@@ -26,6 +26,7 @@ public slots:
     void updateDataRaw(); // слот обновляє дані на мнемосхемі
     void updateDataScaled(); // слот обновляє дані на мнемосхемі
     void updateTrend();
+    void slotCallDlgApOne();
 
 private:
     Ui::mnemo *m_ui;
