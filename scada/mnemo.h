@@ -9,6 +9,8 @@ class IoNetClient;
 class QCheckBox;
 class QLineEdit;
 
+class ApOne;
+
 namespace Ui {
     class mnemo;
 }
@@ -23,10 +25,14 @@ public:
 public slots:
     void updateDataRaw(); // слот обновляє дані на мнемосхемі
     void updateDataScaled(); // слот обновляє дані на мнемосхемі
+    void updateTrend();
 
 private:
     Ui::mnemo *m_ui;
     IoNetClient &s;
+
+    QVector<ApOne*> ap;
+    QVector<TrendChart*> trc;
 
 };
 

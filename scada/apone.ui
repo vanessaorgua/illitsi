@@ -1,112 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mnemo</class>
- <widget class="QLabel" name="mnemo">
+ <class>ApOne</class>
+ <widget class="QLabel" name="ApOne">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1215</width>
-    <height>935</height>
+    <width>350</width>
+    <height>421</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1215</width>
-    <height>935</height>
+    <width>350</width>
+    <height>421</height>
    </size>
   </property>
-  <property name="font">
-   <font>
-    <pointsize>12</pointsize>
-   </font>
+  <property name="maximumSize">
+   <size>
+    <width>350</width>
+    <height>421</height>
+   </size>
   </property>
   <property name="windowTitle">
-   <string>mnemo</string>
+   <string>Form</string>
   </property>
   <property name="pixmap">
-   <pixmap resource="mnemo/mnemo.qrc">:/mnemo/mnemo.svg</pixmap>
+   <pixmap resource="mnemo/mnemo.qrc">:/mnemo/one.svg</pixmap>
   </property>
-  <property name="alignment">
-   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-  </property>
-  <widget class="QFrame" name="ap_1">
-   <property name="geometry">
-    <rect>
-     <x>62</x>
-     <y>100</y>
-     <width>350</width>
-     <height>421</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>350</width>
-     <height>421</height>
-    </size>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-  </widget>
-  <widget class="QFrame" name="ap_2">
-   <property name="geometry">
-    <rect>
-     <x>412</x>
-     <y>100</y>
-     <width>350</width>
-     <height>421</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>350</width>
-     <height>421</height>
-    </size>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-  </widget>
-  <widget class="QFrame" name="ap_3">
-   <property name="geometry">
-    <rect>
-     <x>762</x>
-     <y>100</y>
-     <width>350</width>
-     <height>421</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>350</width>
-     <height>421</height>
-    </size>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-  </widget>
   <widget class="QCheckBox" name="cb_Y_1">
    <property name="geometry">
     <rect>
-     <x>117</x>
-     <y>584</y>
+     <x>39</x>
+     <y>342</y>
      <width>16</width>
      <height>16</height>
     </rect>
@@ -143,8 +75,49 @@ QCheckBox:indicator
   <widget class="QCheckBox" name="cb_X_1">
    <property name="geometry">
     <rect>
-     <x>98</x>
-     <y>576</y>
+     <x>20</x>
+     <y>334</y>
+     <width>20</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox{
+min-width: 20px;
+min-height: 32px;
+max-width: 20px;
+max-height: 32px;
+}
+QCheckBox:checked
+{
+	
+	
+	image: url(:/pict/pict/lib/valve_green_20x32.png);
+}
+
+QCheckBox:unchecked
+{
+	
+	image: url(:/pict/pict/lib/valve_off_20x32.png);
+}
+
+QCheckBox:indicator
+{
+	background: rgba(0, 0, 0, 0);
+	height: 20px;
+	width: 32px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>CheckBox</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cb_X_2">
+   <property name="geometry">
+    <rect>
+     <x>58</x>
+     <y>334</y>
      <width>20</width>
      <height>32</height>
     </rect>
@@ -184,8 +157,8 @@ QCheckBox:indicator
   <widget class="QCheckBox" name="cb_Y_2">
    <property name="geometry">
     <rect>
-     <x>257</x>
-     <y>585</y>
+     <x>77</x>
+     <y>342</y>
      <width>16</width>
      <height>16</height>
     </rect>
@@ -219,11 +192,11 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_2">
+  <widget class="QCheckBox" name="cb_X_3">
    <property name="geometry">
     <rect>
-     <x>238</x>
-     <y>577</y>
+     <x>98</x>
+     <y>334</y>
      <width>20</width>
      <height>32</height>
     </rect>
@@ -263,8 +236,8 @@ QCheckBox:indicator
   <widget class="QCheckBox" name="cb_Y_3">
    <property name="geometry">
     <rect>
-     <x>407</x>
-     <y>584</y>
+     <x>117</x>
+     <y>342</y>
      <width>16</width>
      <height>16</height>
     </rect>
@@ -298,11 +271,11 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_3">
+  <widget class="QCheckBox" name="cb_X_4">
    <property name="geometry">
     <rect>
-     <x>388</x>
-     <y>576</y>
+     <x>201</x>
+     <y>9</y>
      <width>20</width>
      <height>32</height>
     </rect>
@@ -342,8 +315,8 @@ QCheckBox:indicator
   <widget class="QCheckBox" name="cb_Y_4">
    <property name="geometry">
     <rect>
-     <x>557</x>
-     <y>585</y>
+     <x>220</x>
+     <y>17</y>
      <width>16</width>
      <height>16</height>
     </rect>
@@ -377,11 +350,11 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_4">
+  <widget class="QCheckBox" name="cb_X_5">
    <property name="geometry">
     <rect>
-     <x>538</x>
-     <y>577</y>
+     <x>306</x>
+     <y>219</y>
      <width>20</width>
      <height>32</height>
     </rect>
@@ -418,52 +391,220 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame_1">
+  <widget class="QCheckBox" name="cb_Y_5">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>660</y>
-     <width>371</width>
-     <height>251</height>
+     <x>325</x>
+     <y>227</y>
+     <width>16</width>
+     <height>16</height>
     </rect>
    </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox{
+min-width: 16px;
+min-height: 16px;
+max-width: 16px;
+max-height: 16px;
+}
+QCheckBox:checked
+{
+	image: url(:/pict/pict/lib/lamp_green_16x16.png);
+}
+
+QCheckBox:unchecked
+{
+	image: url(:/pict/pict/lib/lamp_off_16x16.png);
+}
+
+QCheckBox:indicator
+{
+	background: rgba(0, 0, 0, 0);
+	height: 16px;
+	width: 16px;
+}
+</string>
    </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+   <property name="text">
+    <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame_2">
+  <widget class="QLCDNumber" name="lc_P">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>660</y>
-     <width>371</width>
-     <height>251</height>
+     <x>183</x>
+     <y>60</y>
+     <width>51</width>
+     <height>28</height>
     </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
    </property>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
+   </property>
+   <property name="numDigits">
+    <number>3</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
-  <widget class="QFrame" name="frame_3">
+  <widget class="QLCDNumber" name="lc_M">
    <property name="geometry">
     <rect>
-     <x>810</x>
-     <y>660</y>
-     <width>371</width>
-     <height>251</height>
+     <x>140</x>
+     <y>270</y>
+     <width>51</width>
+     <height>28</height>
     </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
    </property>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
+   </property>
+   <property name="numDigits">
+    <number>3</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lc_R">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>270</y>
+     <width>51</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="numDigits">
+    <number>3</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lc_L">
+   <property name="geometry">
+    <rect>
+     <x>182</x>
+     <y>109</y>
+     <width>51</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="numDigits">
+    <number>3</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lc_T">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>160</y>
+     <width>51</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="numDigits">
+    <number>3</number>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="pb_L">
+   <property name="geometry">
+    <rect>
+     <x>198</x>
+     <y>143</y>
+     <width>21</width>
+     <height>172</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>160</red>
+         <green>160</green>
+         <blue>160</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>160</red>
+         <green>160</green>
+         <blue>160</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>160</red>
+         <green>160</green>
+         <blue>160</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>160</red>
+         <green>160</green>
+         <blue>160</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
    </property>
   </widget>
  </widget>

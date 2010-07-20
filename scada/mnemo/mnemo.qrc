@@ -1,5 +1,14 @@
 <RCC>
   <qresource prefix="/mnemo">
     <file>mnemo.svg</file>
+    <file>one.svg</file>
+  </qresource>
+  <qresource prefix="pict">
+    <file>../../../../pict/lib/valve_green_20x32.png</file>
+    <file>../../../../pict/lib/valve_green_l_20x32.png</file>
+    <file>../../../../pict/lib/lamp_green_16x16.png</file>
+    <file>../../../../pict/lib/lamp_off_16x16.png</file>
+    <file>../../../../pict/lib/valve_off_20x32.png</file>
+    <file>../../../../pict/lib/valve_off_l_20x32.png</file>
   </qresource>
 </RCC>
