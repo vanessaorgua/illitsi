@@ -9,11 +9,13 @@
 
 #include <apone.h>
 #include "trendchart.h"
+#include "dlgapone.h"
 
 
 Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(src)
 {
     m_ui->setupUi(this);
+
 
 
     connect(&s,SIGNAL(updateDataRaw()),this,SLOT(updateDataRaw())); // при отриманні нових даних, засвітити їх на картинці
@@ -53,7 +55,9 @@ Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(sr
         vbl->addWidget(trc[2]);
         m_ui->frame_3->setLayout(vbl);
     }
-
+    connect(m_ui->bnCall_1,SIGNAL(clicked()),this,SLOT(slotCallDlgApOne()));
+    connect(m_ui->bnCall_2,SIGNAL(clicked()),this,SLOT(slotCallDlgApOne()));
+    connect(m_ui->bnCall_3,SIGNAL(clicked()),this,SLOT(slotCallDlgApOne()));
 
 }
 
@@ -77,4 +81,10 @@ void Mnemo::updateTrend()
 {
   //m_ui->labelSize->setText(QString("%1x%2").arg(size().width()).arg(size().height()));
   
+}
+
+void Mnemo::slotCallDlgApOne()
+{
+    DlgApOne p(this);
+    p.exec();
 }

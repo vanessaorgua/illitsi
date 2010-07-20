@@ -34,7 +34,7 @@
   <property name="pixmap">
    <pixmap resource="mnemo/mnemo.qrc">:/mnemo/one.svg</pixmap>
   </property>
-  <widget class="QCheckBox" name="cb_Y_1">
+  <widget class="QCheckBox" name="cb_sirup">
    <property name="geometry">
     <rect>
      <x>39</x>
@@ -72,7 +72,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_1">
+  <widget class="QCheckBox" name="cb_sirup_r">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -113,7 +113,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_2">
+  <widget class="QCheckBox" name="cb_voda_r">
    <property name="geometry">
     <rect>
      <x>58</x>
@@ -154,7 +154,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_Y_2">
+  <widget class="QCheckBox" name="cb_voda">
    <property name="geometry">
     <rect>
      <x>77</x>
@@ -192,7 +192,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_3">
+  <widget class="QCheckBox" name="cb_bila_r">
    <property name="geometry">
     <rect>
      <x>98</x>
@@ -233,7 +233,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_Y_3">
+  <widget class="QCheckBox" name="cb_bila">
    <property name="geometry">
     <rect>
      <x>117</x>
@@ -271,7 +271,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_4">
+  <widget class="QCheckBox" name="c2_vakume_r">
    <property name="geometry">
     <rect>
      <x>201</x>
@@ -312,7 +312,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_Y_4">
+  <widget class="QCheckBox" name="c1_vakume_r">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -350,7 +350,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_X_5">
+  <widget class="QCheckBox" name="cb_para_r">
    <property name="geometry">
     <rect>
      <x>306</x>
@@ -391,7 +391,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_Y_5">
+  <widget class="QCheckBox" name="cb_para">
    <property name="geometry">
     <rect>
      <x>325</x>
@@ -429,7 +429,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lc_P">
+  <widget class="QLCDNumber" name="lc_Vak">
    <property name="geometry">
     <rect>
      <x>183</x>
@@ -448,7 +448,7 @@ QCheckBox:indicator
     <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lc_M">
+  <widget class="QLCDNumber" name="lc_Vias">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -467,7 +467,7 @@ QCheckBox:indicator
     <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lc_R">
+  <widget class="QLCDNumber" name="lc_Opr">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -486,7 +486,7 @@ QCheckBox:indicator
     <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lc_L">
+  <widget class="QLCDNumber" name="lc_Lev">
    <property name="geometry">
     <rect>
      <x>182</x>
@@ -505,7 +505,7 @@ QCheckBox:indicator
     <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lc_T">
+  <widget class="QLCDNumber" name="lc_Temp">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -524,7 +524,7 @@ QCheckBox:indicator
     <enum>QLCDNumber::Flat</enum>
    </property>
   </widget>
-  <widget class="QProgressBar" name="pb_L">
+  <widget class="QProgressBar" name="pb_Lev">
    <property name="geometry">
     <rect>
      <x>198</x>
