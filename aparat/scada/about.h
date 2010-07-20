@@ -12,6 +12,7 @@ Q_OBJECT
     {
 	setupUi(this);
 	connect(abQt,SIGNAL(clicked()),this,SLOT(slotQt()));
+        label_4->setText(QString("%1 x %2").arg(parent->size().width()).arg(parent->size().height()));
 
     }
     private slots:

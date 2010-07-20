@@ -15,22 +15,12 @@ int main(int argc,char **argv)
     QApplication app(argc,argv);
 
     QCoreApplication::setOrganizationName("Rabitsa");
-    QCoreApplication::setApplicationName("filters");
+    QCoreApplication::setApplicationName("aparat");
 
     QSettings s;
     
     IoNetClient net(s.value("/ioserv/hostname","localhost").toString());
 
-//    QSqlDatabase dbs=QSqlDatabase::addDatabase("QMYSQL");
-
-//    dbs.setHostName(s.value("/db/host","localhost").toString());
-//    dbs.setDatabaseName(s.value("/db/db","vipgr").toString());
-//    dbs.setUserName(s.value("/db/username","scada").toString());
-//    dbs.setPassword(s.value("/db/passwd","").toString());
-
-//    if( ! dbs.open())
-//	qDebug() << "No connect to database";
-    
     
     QStackedWidget main;
     QColor cl;
@@ -39,9 +29,9 @@ int main(int argc,char **argv)
     pal.setColor(QPalette::Background,cl);
     main.setPalette(pal);
 
-    QTranslator translator;
-    translator.load("filters_"+QLocale::system().name(),":/translate");
-    app.installTranslator(&translator);
+    //QTranslator translator;
+    //translator.load("scada_"+QLocale::system().name(),":/translate");
+    //app.installTranslator(&translator);
 
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     
@@ -52,10 +42,15 @@ int main(int argc,char **argv)
 
     //QObject::connect(mainForm->Exit,SIGNAL(clicked()),&main,SLOT(close()));
 
-    main.showFullScreen();
-    //main.resize(1366,768);
-    //main.show();
-
+    if(QApplication::desktop()->size().width()>1280 && QApplication::desktop()->size().height()> 1024)
+    {
+        main.resize(1280,1024);
+        main.show();
+    }
+    else
+    {
+        main.showFullScreen();
+    }
     return app.exec();
 }
 
