@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>487</height>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,7 +40,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="le_State"/>
          </item>
         </layout>
        </widget>
@@ -166,9 +166,6 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QSpinBox" name="sb_Kor"/>
-         </item>
          <item row="2" column="0" colspan="2">
           <widget class="QDial" name="dl_Kor">
            <property name="minimum">
@@ -182,6 +179,16 @@
            </property>
            <property name="notchesVisible">
             <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="sb_Kor">
+           <property name="minimum">
+            <number>-25</number>
+           </property>
+           <property name="maximum">
+            <number>25</number>
            </property>
           </widget>
          </item>

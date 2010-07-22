@@ -27,15 +27,15 @@ Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(sr
     connect(t,SIGNAL(timeout()),this,SLOT(updateTrend()));
 
     {
-        ApOne *t=new ApOne(m_ui->ap_1);
+        ApOne *t=new ApOne(/**s[0],*/m_ui->ap_1);
         ap << t;
     }
     {
-        ApOne *t=new ApOne(m_ui->ap_2);
+        ApOne *t=new ApOne(/**s[1],*/m_ui->ap_2);
         ap << t;
     }
     {
-        ApOne *t=new ApOne(m_ui->ap_3);
+        ApOne *t=new ApOne(/**s[2],*/m_ui->ap_3);
         ap << t;
     }
     trc << new TrendChart(m_ui->frame_1,7200,10) << new TrendChart(m_ui->frame_2,7200,10) << new TrendChart(m_ui->frame_3,7200,10);
@@ -69,7 +69,10 @@ Mnemo::~Mnemo()
 
 void Mnemo::updateDataRaw()
 {
-
+    for(int i=0;i<3;++i)
+    {
+        ap[i]->updateData(*s[i]);
+    }
 }
 
 void Mnemo::updateDataScaled() // слот обновляє дані на мнемосхемі
