@@ -4,6 +4,7 @@
 #include <QDialog>
 
 class ApOne;
+class IoDev;
 
 namespace Ui {
     class DlgApOne;
@@ -12,8 +13,9 @@ namespace Ui {
 class DlgApOne : public QDialog {
     Q_OBJECT
 public:
-    DlgApOne(QWidget *parent = 0);
+    DlgApOne(IoDev &source, QWidget *parent = 0);
     ~DlgApOne();
+
 
 protected:
     void changeEvent(QEvent *e);
@@ -21,7 +23,7 @@ protected:
 private:
     Ui::DlgApOne *ui;
     ApOne *ap;
-
+    IoDev &src;
 };
 
 #endif // DLGAPONE_H

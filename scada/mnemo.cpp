@@ -85,6 +85,6 @@ void Mnemo::updateTrend()
 
 void Mnemo::slotCallDlgApOne()
 {
-    DlgApOne p(this);
+    DlgApOne p(*s[sender()->objectName().right(1).toInt()-1],this);
     p.exec();
 }

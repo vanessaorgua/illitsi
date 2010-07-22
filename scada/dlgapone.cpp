@@ -1,9 +1,11 @@
 #include "dlgapone.h"
 #include "ui_dlgapone.h"
 #include "apone.h"
+#include "iodev.h"
 
-DlgApOne::DlgApOne(QWidget *parent) :
+DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     QDialog(parent),
+    src(source),
     ui(new Ui::DlgApOne)
 {
     ui->setupUi(this);
