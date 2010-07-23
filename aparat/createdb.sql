@@ -87,3 +87,22 @@ Tall smallint default '0',
 Page smallint default '0',
 primary key(Dt)) Engine=InnoDb;
 
+
+create table trend (Dt integer unsigned not null,
+h_1 smallint default '0',
+h_2 smallint default '0',
+h_3 smallint default '0',
+L_1 smallint default '0',
+L_2 smallint default '0',
+L_3 smallint default '0',
+L_4 smallint default '0',
+L_5 smallint default '0',
+T_1 smallint default '0',
+T_2 smallint default '0',
+T_3 smallint default '0',
+T_4 smallint default '0',
+T_5 smallint default '0',
+T_6 smallint default '0',
+primary key(Dt)) Engine=InnoDb;
+
+grant INSERT,SELECT,UPDATE,DELETE on aparat.* to 'scada'@'%';

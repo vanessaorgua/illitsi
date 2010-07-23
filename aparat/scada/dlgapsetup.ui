@@ -743,7 +743,7 @@
     </spacer>
    </item>
    <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="bnExit">
      <property name="text">
       <string>Закрити</string>
      </property>
@@ -752,5 +752,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>bnExit</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgApSetup</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>402</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>223</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

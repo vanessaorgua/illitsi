@@ -13,6 +13,7 @@ SParamDialog::SParamDialog(IoDev &src,QWidget *parent) :
 {
     m_ui->setupUi(this);
 
+    /*
     foreach(QString tag,s.getTags().keys())
     {
         if(s.isScaleChange(tag))
@@ -23,7 +24,7 @@ SParamDialog::SParamDialog(IoDev &src,QWidget *parent) :
     {
         m_ui->bx_Teg->addItem(s.getText()[str]);
     }
-
+*/
     connect(m_ui->bn_Ok,SIGNAL(clicked()),this,SLOT(myAccept()));
     connect(m_ui->bx_Teg,SIGNAL(currentIndexChanged(int)),this,SLOT(selectTeg(int)));
 
@@ -32,8 +33,8 @@ SParamDialog::SParamDialog(IoDev &src,QWidget *parent) :
     connect(m_ui->sb_f,SIGNAL(valueChanged(QString)),this,SLOT(slotSet(QString)));
     //connect(m_ui->sb_m,SIGNAL(valueChanged(QString)),this,SLOT(slotSet(QString)));
 
-    m_ui->bx_Teg->setCurrentIndex(0);
-    selectTeg(0);
+    //m_ui->bx_Teg->setCurrentIndex(0);
+    //selectTeg(0);
 
     QSettings set;
     m_ui->le_ioserv->setText(set.value("/ioserv/hostname","localhost").toString());

@@ -24,7 +24,20 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     connect(ui->bnGrowth_1,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnGrowth_2,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnGrowth_3,SIGNAL(clicked()),this,SLOT(slotCommand()));
+    connect(ui->bnGrowth_4,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnClasp,SIGNAL(clicked()),this,SLOT(slotCommand()));
+
+    // заповнення хешу команд
+    cmd[ui->bnStop->objectName()]=1;
+    cmd[ui->bnStart->objectName()]=3;
+    cmd[ui->bnConcretion->objectName()]=4;
+    cmd[ui->bnRarefaction->objectName()]=8;
+    cmd[ui->bnGrowth_1->objectName()]=14;
+    cmd[ui->bnGrowth_2->objectName()]=15;
+    cmd[ui->bnGrowth_3->objectName()]=16;
+    cmd[ui->bnGrowth_4->objectName()]=17;
+    cmd[ui->bnClasp->objectName()]=18;
+
 
     lastKor=src.getValue16("Kor");
     ui->sb_Kor->setValue(lastKor);
@@ -40,26 +53,26 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     connect(t,SIGNAL(timeout()),this,SLOT(updateData()));
 
     state
-            << "Невизначено"
-            << "Очікування"
-            << "Старт"
-            << "Набір"
-            << "Згущення"
-            << "Затравка"
-            << "Згущення"
-            << "Поличка"
-            << "Розкачака 1"
-            << "Згущення"
-            << "Розкачка 2"
-            << "Згущення"
-            << "Розкачка 3"
-            << "Згущення"
-            << "Ріст 1"
-            << "Ріст 2"
-            << "Ріст 3"
-            << "Ріст 4"
-            << "Уварювання"
-            << "Вивантаження";
+            << tr("Невизначено")
+            << tr("Очікування")
+            << tr("Очікування")
+            << tr("Набір")
+            << tr("Згущення")
+            << tr("Затравка")
+            << tr("Згущення")
+            << tr("Поличка")
+            << tr("Розкачака 1")
+            << tr("Згущення")
+            << tr("Розкачка 2")
+            << tr("Згущення")
+            << tr("Розкачка 3")
+            << tr("Згущення")
+            << tr("Ріст 1")
+            << tr("Ріст 2")
+            << tr("Ріст 3")
+            << tr("Ріст 4")
+            << tr("Уварювання")
+            << tr("Вивантаження");
 
 }
 
@@ -84,13 +97,14 @@ void DlgApOne::changeEvent(QEvent *e)
 void DlgApOne::slotCallSetup()
 {
         DlgApSetup p(src,this);
+        p.setWindowTitle(QString(tr("Параметри апарату №%1")).arg(windowTitle().right(1)));
         p.exec();
 }
 
 void DlgApOne::slotCommand()
 {
-
-
+    src.sendValue("Status",cmd[sender()->objectName()]);
+    qDebug() << "Status" << cmd[sender()->objectName()];
 }
 void DlgApOne::slotSetKor(int v)
 {
@@ -107,7 +121,9 @@ void DlgApOne::slotSetKor(int v)
         ui->sb_Kor->blockSignals(false);
     }
     lastKor=v;
+
     src.sendValue("Kor",qint16(v));
+   qDebug() << "kor = " << src.getValue16("Kor");
 }
 
 

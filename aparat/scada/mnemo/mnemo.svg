@@ -929,7 +929,7 @@
        xlink:href="#linearGradient10835"
        id="linearGradient6484"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.06104231,0,0,7.7118652,-632.57557,-3558.2701)"
+       gradientTransform="matrix(0.06104231,0,0,8.1281307,-632.57557,-3707.6128)"
        x1="257.42029"
        y1="404.41205"
        x2="322.94861"
@@ -1267,6 +1267,46 @@
        y1="404.41205"
        x2="322.94861"
        y2="404.41205" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10835"
+       id="linearGradient5293"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.06104231,0,0,0.53676333,-65.21357,420.28852)"
+       x1="257.42029"
+       y1="404.41205"
+       x2="322.94861"
+       y2="404.41205" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10835"
+       id="linearGradient5297"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.06104231,0,0,0.08763483,-66.21357,720.42143)"
+       x1="257.42029"
+       y1="404.41205"
+       x2="322.94861"
+       y2="404.41205" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10835"
+       id="linearGradient5301"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.06104231,0,0,0.08763483,-211.21357,720.42143)"
+       x1="257.42029"
+       y1="404.41205"
+       x2="322.94861"
+       y2="404.41205" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10835"
+       id="linearGradient5305"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.06104231,0,0,1.5445637,740.14843,-503.63998)"
+       x1="257.42029"
+       y1="404.41205"
+       x2="322.94861"
+       y2="404.41205" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1275,9 +1315,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70000001"
-     inkscape:cx="542.6633"
-     inkscape:cy="371.97451"
+     inkscape:zoom="1.979899"
+     inkscape:cx="315.10727"
+     inkscape:cy="335.98676"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1330,7 +1370,7 @@
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient6484);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
        id="rect6482"
        width="4"
-       height="704"
+       height="742"
        x="-616.862"
        y="-791.5"
        transform="matrix(0,-1,-1,0,0,0)" />
@@ -1496,50 +1536,37 @@
        id="rect6628"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient6638);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
        transform="matrix(0,1,1,0,0,0)" />
-    <path
-       i:knockout="Off"
-       d="m 520.5,751.8621 -60.00001,0 0,-89.99992 60.00001,0 0,89.99992 z"
-       id="path6640"
-       style="fill:url(#linearGradient6650);stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
     <rect
-       y="-741.862"
-       x="543.5"
-       height="22"
+       transform="scale(-1,1)"
+       y="612.862"
+       x="-49.5"
+       height="49"
        width="4"
-       id="rect6642"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient6652);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       transform="scale(1,-1)" />
-    <path
-       sodipodi:type="star"
-       style="font-size:74.21116638px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient6654);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       id="path6644"
-       sodipodi:sides="3"
-       sodipodi:cx="72.009697"
-       sodipodi:cy="305.46957"
-       sodipodi:r1="32.886318"
-       sodipodi:r2="17.977293"
-       sodipodi:arg1="1.5707963"
-       sodipodi:arg2="2.6179939"
-       inkscape:flatsided="true"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 72.009698,338.35589 -28.480388,-49.32947 56.96077,-10e-6 -28.480382,49.32948 z"
-       transform="matrix(0,-0.22822724,-0.28380596,0,616.52741,760.2966)" />
+       id="rect5291"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient5293);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" />
     <rect
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient6656);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       id="rect6646"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient5297);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       id="rect5295"
        width="4"
-       height="25"
-       x="543.5"
-       y="-689.862"
-       transform="scale(1,-1)" />
+       height="8.000001"
+       x="-50.5"
+       y="751.862"
+       transform="scale(-1,1)" />
     <rect
-       transform="matrix(0,1,1,0,0,0)"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient6658);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       id="rect6648"
+       transform="scale(-1,1)"
+       y="751.862"
+       x="-195.5"
+       height="8.000001"
        width="4"
-       height="13"
-       x="741.862"
-       y="534.5" />
+       id="rect5299"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient5301);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" />
+    <rect
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient5305);fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       id="rect5303"
+       width="4"
+       height="141"
+       x="755.862"
+       y="50.5"
+       transform="matrix(0,1,1,0,0,0)" />
   </g>
 </svg>
