@@ -8,7 +8,7 @@ class TrendChart;
 class IoNetClient;
 class QCheckBox;
 class QLineEdit;
-
+class QStringList;
 class ApOne;
 
 namespace Ui {
@@ -35,6 +35,7 @@ private:
     QVector<ApOne*> ap;
     QVector<TrendChart*> trc;
 
+    QStringList state;
 };
 
 #endif

@@ -2,10 +2,13 @@
 #define DLGAPONE_H
 
 #include <QDialog>
+#include <QHash>
 
 class ApOne;
 class IoDev;
 class QStringList;
+class QString;
+
 
 namespace Ui {
     class DlgApOne;
@@ -33,6 +36,8 @@ private:
 
     QStringList state;
     qint16 lastKor;
+    QHash<QString,qint16> cmd;
+
 };
 
 #endif // DLGAPONE_H

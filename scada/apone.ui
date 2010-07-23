@@ -113,7 +113,7 @@ QCheckBox:indicator
     <string>CheckBox</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="cb_voda_r">
+  <widget class="QCheckBox" name="cb_voda_R">
    <property name="geometry">
     <rect>
      <x>58</x>
@@ -485,6 +485,9 @@ QCheckBox:indicator
    <property name="segmentStyle">
     <enum>QLCDNumber::Flat</enum>
    </property>
+   <property name="intValue" stdset="0">
+    <number>100</number>
+   </property>
   </widget>
   <widget class="QLCDNumber" name="lc_Lev">
    <property name="geometry">
@@ -605,6 +608,42 @@ QCheckBox:indicator
    </property>
    <property name="orientation">
     <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>250</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>R,%</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>250</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>M, %</string>
    </property>
   </widget>
  </widget>

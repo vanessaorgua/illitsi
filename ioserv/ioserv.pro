@@ -9,10 +9,8 @@ CONFIG -= app_bundle
 CONFIG += debug_and_release
 TEMPLATE = app
 
-HEADERS += reportwr.h
 
-SOURCES += main.cpp \
-    reportwr.cpp
+SOURCES += main.cpp 
 MOC_DIR = build
 OBJECTS_DIR = build
 UI_DIR = build

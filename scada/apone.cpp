@@ -18,7 +18,7 @@ ApOne::ApOne(/*IoDev &source,*/ QWidget *parent) :
             << ui->cb_bila
             << ui->cb_bila_r
             << ui->cb_voda
-            << ui->cb_voda_r
+            << ui->cb_voda_R
             << ui->cb_para
             << ui->cb_para_r
             << ui->c1_vakume_r
@@ -63,9 +63,11 @@ void ApOne::updateData(IoDev &src)
     }
     foreach(QLCDNumber *p, lcd)
     {
-        p->display(src.getValueFloat(p->objectName().right(p->objectName().size()-3)));
+        p->display((int)src.getValueFloat(p->objectName().right(p->objectName().size()-3)));
+        //qDebug() << p->objectName() << src.getValueFloat(p->objectName().right(p->objectName().size()-3));
     }
     ui->pb_Lev->setValue(src.getValueFloat("Lev"));
+
 }
 
 
