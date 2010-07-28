@@ -29,7 +29,10 @@ ApOne::ApOne(/*IoDev &source,*/ QWidget *parent) :
             << ui->lc_Vias
             << ui->lc_Lev
             << ui->lc_Vak
-            << ui->lc_Temp;
+            << ui->lc_Temp
+            << ui->lc_Mr
+            << ui->lc_Rr;
+
 
 //    QTimer *t=new QTimer(this);
 //    t->setInterval(1000);

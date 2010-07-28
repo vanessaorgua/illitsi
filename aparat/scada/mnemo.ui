@@ -612,6 +612,45 @@
     </size>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>40</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>N1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>40</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>N2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>40</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>N3</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="mnemo/mnemo.qrc"/>

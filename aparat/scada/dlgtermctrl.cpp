@@ -52,10 +52,10 @@ void DlgTermCtrl::changeEvent(QEvent *e)
 
 void DlgTermCtrl::updateData()
 {
-    ui->le_L->setText(QString("%1").arg(src.getValueFloat(QString("L_%1").arg(n))));
+    ui->lc_L->display((int)src.getValueFloat(QString("L_%1").arg(n)));
     ui->pb_L_->setValue(src.getValueFloat(QString("L_%1").arg(n)));
 
-    ui->le_T->setText(QString("%1").arg(src.getValueFloat(QString("T_%1").arg(n))));
+    ui->lc_T->display((int)src.getValueFloat(QString("T_%1").arg(n)));
     ui->c1_h_->setChecked(src.getValue16(QString("h_%1").arg(n)));
     ui->c2_h_->setChecked(src.getValue16(QString("h_%1").arg(1)));
 
