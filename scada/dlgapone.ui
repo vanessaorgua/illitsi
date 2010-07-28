@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>529</height>
+    <height>531</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -15,6 +15,12 @@
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="2" colspan="2">
@@ -68,6 +74,13 @@
           <widget class="QPushButton" name="bnConcretion">
            <property name="text">
             <string>Згущення</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="bnPriming">
+           <property name="text">
+            <string>Затравка</string>
            </property>
           </widget>
          </item>

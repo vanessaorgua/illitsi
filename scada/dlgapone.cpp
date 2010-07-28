@@ -20,6 +20,7 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     connect(ui->bnStop,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnStart,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnConcretion,SIGNAL(clicked()),this,SLOT(slotCommand()));
+    connect(ui->bnPriming,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnRarefaction,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnGrowth_1,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnGrowth_2,SIGNAL(clicked()),this,SLOT(slotCommand()));
@@ -32,6 +33,7 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     cmd[ui->bnStop->objectName()]=1;
     cmd[ui->bnStart->objectName()]=3;
     cmd[ui->bnConcretion->objectName()]=4;
+    cmd[ui->bnPriming->objectName()]=6;
     cmd[ui->bnRarefaction->objectName()]=8;
     cmd[ui->bnGrowth_1->objectName()]=14;
     cmd[ui->bnGrowth_2->objectName()]=15;
@@ -42,6 +44,7 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     page[ui->bnStop->objectName()]=1;
     page[ui->bnStart->objectName()]=2;
     page[ui->bnConcretion->objectName()]=3;
+    page[ui->bnPriming->objectName()]=3;
     page[ui->bnRarefaction->objectName()]=4;
     page[ui->bnGrowth_1->objectName()]=8;
     page[ui->bnGrowth_2->objectName()]=9;
@@ -70,14 +73,14 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
             << tr("Набір")
             << tr("Згущення")
             << tr("Затравка")
-            << tr("Згущення")
-            << tr("Поличка")
-            << tr("Розкачака 1")
-            << tr("Згущення")
+            << tr("Згущення 1")
+            << tr("Поличка ")
+            << tr("Розкачка 1")
+            << tr("Згущення 2")
             << tr("Розкачка 2")
-            << tr("Згущення")
+            << tr("Згущення 3")
             << tr("Розкачка 3")
-            << tr("Згущення")
+            << tr("Згущення 4")
             << tr("Ріст 1")
             << tr("Ріст 2")
             << tr("Ріст 3")
@@ -114,9 +117,24 @@ void DlgApOne::slotCallSetup()
 
 void DlgApOne::slotCommand()
 {
-    src.sendValue("Status",cmd[sender()->objectName()]);
-    src.sendValue("Page",page[sender()->objectName()]);
-    qDebug() << "Status" << cmd[sender()->objectName()];
+
+    if(sender()->objectName()=="bnStop")
+    {
+        if(QMessageBox::warning(this,tr("Попередження"),tr("Зупинити ?"),
+            QMessageBox::Yes|QMessageBox::No,QMessageBox::No) == QMessageBox::Yes)
+        {
+            src.sendValue("Status",cmd[sender()->objectName()]);
+            src.sendValue("Page",page[sender()->objectName()]);
+        }
+
+    }
+    else
+    {
+        src.sendValue("Status",cmd[sender()->objectName()]);
+        src.sendValue("Page",page[sender()->objectName()]);
+
+    }
+
 }
 void DlgApOne::slotSetKor(int v)
 {

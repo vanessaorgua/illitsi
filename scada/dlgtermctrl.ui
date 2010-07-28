@@ -218,30 +218,39 @@ QCheckBox:indicator
        <string>CheckBox</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="le_L">
+     <widget class="QLCDNumber" name="lc_L">
       <property name="geometry">
        <rect>
-        <x>22</x>
-        <y>5</y>
+        <x>10</x>
+        <y>0</y>
         <width>41</width>
-        <height>24</height>
+        <height>28</height>
        </rect>
       </property>
-      <property name="text">
-       <string>100</string>
+      <property name="numDigits">
+       <number>3</number>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QLineEdit" name="le_T">
+     <widget class="QLCDNumber" name="lc_T">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>40</y>
+        <x>90</x>
+        <y>30</y>
         <width>41</width>
-        <height>24</height>
+        <height>28</height>
        </rect>
       </property>
-      <property name="text">
-       <string>100</string>
+      <property name="numDigits">
+       <number>3</number>
+      </property>
+      <property name="segmentStyle">
+       <enum>QLCDNumber::Flat</enum>
+      </property>
+      <property name="intValue" stdset="0">
+       <number>150</number>
       </property>
      </widget>
     </widget>
@@ -334,7 +343,9 @@ QCheckBox:indicator
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="mnemo/mnemo.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>bnExit</sender>
