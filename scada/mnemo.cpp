@@ -10,6 +10,7 @@
 #include <apone.h>
 #include "trendchart.h"
 #include "dlgapone.h"
+#include "dlgtermctrl.h"
 
 
 Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(src)
@@ -22,7 +23,7 @@ Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(sr
     connect(&s,SIGNAL(updateDataScaled()),this,SLOT(updateDataScaled())); // при отриманні нових даних, засвітити їх на картинці
 
     QTimer *t=new QTimer(this);
-    t->setInterval(1000);
+    t->setInterval(10000);
     t->start();
     connect(t,SIGNAL(timeout()),this,SLOT(updateTrend()));
 
@@ -58,6 +59,10 @@ Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(sr
     connect(m_ui->bnCall_1,SIGNAL(clicked()),this,SLOT(slotCallDlgApOne()));
     connect(m_ui->bnCall_2,SIGNAL(clicked()),this,SLOT(slotCallDlgApOne()));
     connect(m_ui->bnCall_3,SIGNAL(clicked()),this,SLOT(slotCallDlgApOne()));
+
+    connect(m_ui->bn_T_1,SIGNAL(clicked()),this,SLOT(slotCallTermCtrl()));
+    connect(m_ui->bn_T_2,SIGNAL(clicked()),this,SLOT(slotCallTermCtrl()));
+    connect(m_ui->bn_T_3,SIGNAL(clicked()),this,SLOT(slotCallTermCtrl()));
 
     state
             << tr("Невизначено")
@@ -107,14 +112,16 @@ void Mnemo::updateDataRaw()
     m_ui->le_T_2->setText(QString("%1").arg(s[3]->getValueFloat("T_2"),3,'f',0));
     m_ui->le_T_3->setText(QString("%1").arg(s[3]->getValueFloat("T_3"),3,'f',0));
 
-    m_ui->c1_h_1->setChecked(s[3]->getValue16("h_1"));
-    m_ui->c2_h_1->setChecked(s[3]->getValue16("h_1"));
+    //m_ui->c1_h_1->setChecked(s[3]->getValue16("h_1"));
+    //m_ui->c1_h_2->setChecked(s[3]->getValue16("h_2"));
+    //m_ui->c1_h_3->setChecked(s[3]->getValue16("h_3"));
 
-    m_ui->c1_h_2->setChecked(s[3]->getValue16("h_2"));
-    m_ui->c2_h_2->setChecked(s[3]->getValue16("h_2"));
-
-    m_ui->c1_h_3->setChecked(s[3]->getValue16("h_3"));
-    m_ui->c2_h_3->setChecked(s[3]->getValue16("h_3"));
+    m_ui->bn_T_1->setIcon(QIcon(QPixmap(s[3]->getValue16("h_1")
+                                      ?	":/pict/pict/lib/valve_green_20x32.png":":/pict/pict/lib/valve_off_20x32.png")));
+    m_ui->bn_T_2->setIcon(QIcon(QPixmap(s[3]->getValue16("h_2")
+                                      ?	":/pict/pict/lib/valve_green_20x32.png":":/pict/pict/lib/valve_off_20x32.png")));
+    m_ui->bn_T_3->setIcon(QIcon(QPixmap(s[3]->getValue16("h_3")
+                                      ?	":/pict/pict/lib/valve_green_20x32.png":":/pict/pict/lib/valve_off_20x32.png")));
 
 
 }
@@ -148,5 +155,12 @@ void Mnemo::slotCallDlgApOne()
 {
     DlgApOne p(*s[sender()->objectName().right(1).toInt()-1],this);
     p.setWindowTitle(QString(tr("Управління апаратом №%1")).arg(sender()->objectName().right(1)));
+    p.exec();
+}
+
+void Mnemo::slotCallTermCtrl()
+{
+    DlgTermCtrl p(*s[3],sender()->objectName().right(1).toInt(),this);
+    p.setWindowTitle(QString(tr("Збірник №%1")).arg(sender()->objectName().right(1)));
     p.exec();
 }
