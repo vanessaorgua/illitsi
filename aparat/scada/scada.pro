@@ -14,7 +14,8 @@ HEADERS += mainform.h \
     alertviewdialog.h \
     apone.h \
     dlgapone.h \
-    dlgapsetup.h
+    dlgapsetup.h \
+    dlgtermctrl.h
 FORMS += mainform.ui \
     mnemo.ui \
     sparamdialog.ui \
@@ -23,7 +24,8 @@ FORMS += mainform.ui \
     alertviewdialog.ui \
     apone.ui \
     dlgapone.ui \
-    dlgapsetup.ui
+    dlgapsetup.ui \
+    dlgtermctrl.ui
 SOURCES += main.cpp \
     mainform.cpp \
     mnemo.cpp \
@@ -32,7 +34,8 @@ SOURCES += main.cpp \
     alertviewdialog.cpp \
     apone.cpp \
     dlgapone.cpp \
-    dlgapsetup.cpp
+    dlgapsetup.cpp \
+    dlgtermctrl.cpp
 RESOURCES += mnemo/mnemo.qrc \
     ../../../lib/picture.qrc \
     ../../../pict/lib/valves.qrc \

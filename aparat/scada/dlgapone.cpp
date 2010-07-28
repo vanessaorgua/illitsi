@@ -28,6 +28,7 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     connect(ui->bnClasp,SIGNAL(clicked()),this,SLOT(slotCommand()));
 
     // заповнення хешу команд
+
     cmd[ui->bnStop->objectName()]=1;
     cmd[ui->bnStart->objectName()]=3;
     cmd[ui->bnConcretion->objectName()]=4;
@@ -37,6 +38,16 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     cmd[ui->bnGrowth_3->objectName()]=16;
     cmd[ui->bnGrowth_4->objectName()]=17;
     cmd[ui->bnClasp->objectName()]=18;
+
+    page[ui->bnStop->objectName()]=1;
+    page[ui->bnStart->objectName()]=2;
+    page[ui->bnConcretion->objectName()]=3;
+    page[ui->bnRarefaction->objectName()]=4;
+    page[ui->bnGrowth_1->objectName()]=8;
+    page[ui->bnGrowth_2->objectName()]=9;
+    page[ui->bnGrowth_3->objectName()]=10;
+    page[ui->bnGrowth_4->objectName()]=11;
+    page[ui->bnClasp->objectName()]=12;
 
 
     lastKor=src.getValue16("Kor");
@@ -104,6 +115,7 @@ void DlgApOne::slotCallSetup()
 void DlgApOne::slotCommand()
 {
     src.sendValue("Status",cmd[sender()->objectName()]);
+    src.sendValue("Page",page[sender()->objectName()]);
     qDebug() << "Status" << cmd[sender()->objectName()];
 }
 void DlgApOne::slotSetKor(int v)

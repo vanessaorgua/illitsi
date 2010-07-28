@@ -37,6 +37,7 @@ private:
     QStringList state;
     qint16 lastKor;
     QHash<QString,qint16> cmd;
+    QHash<QString,qint16> page;
 
 };
 
