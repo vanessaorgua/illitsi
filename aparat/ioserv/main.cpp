@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
         r << t;
         src << t;
     }
-
         RxModbus *t= new RxModbus;
         t->setObjectName("common");
         t->loadList(":/text/list2.txt");

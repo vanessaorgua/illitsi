@@ -8,16 +8,14 @@ TARGET = ioserv
 CONFIG -= app_bundle
 CONFIG += debug_and_release
 TEMPLATE = app
-
-
-SOURCES += main.cpp 
+SOURCES += main.cpp
 MOC_DIR = build
 OBJECTS_DIR = build
 UI_DIR = build
 RCC_DIR = build
-OTHER_FILES += list.txt
+OTHER_FILES += list.txt \
+    list2.txt
 RESOURCES += test.qrc
 QMAKE_LIBDIR += ../../../lib
 LIBS += -lrcada
 INCLUDEPATH += ../../../lib/include
-
