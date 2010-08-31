@@ -1,0 +1,33 @@
+h_1	13	Bool	1	1	-	Перший клапан
+h_2	14	Bool	1	1	-	Другий клапан
+h_3	15	Bool	1	1	-	Третій клапан
+L_1	16	Real	1	1	-	Рівень
+L_2	18	Real	1	1	-	Рівень
+L_3	20	Real	1	1	-	Рівень
+L_4	22	Real	1	1	-	Рівень
+L_5	24	Real	1	1	-	Рівень
+T_1	26	Real	1	1	-	Температура
+T_2	28	Real	1	1	-	Температура
+T_3	30	Real	1	1	-	Температура
+T_4	32	Real	1	1	-	Температура
+T_5	34	Real	1	1	-	Температура
+T_6	36	Real	1	1	-	Температура
+Save	63	Bool	300	0	-	Save
+AM_1	64	Bool	300	0	-	AM_1
+AM_2	65	Bool	300	0	-	AM_2
+AM_3	66	Bool	300	0	-	AM_3
+AM_4	67	Bool	300	0	-	AM_4
+AM_5	68	Bool	300	0	-	AM_5
+AM_6	69	Bool	300	0	-	AM_6
+sp_T_1	106	Real	300	0	-	sp_T_1
+sp_T_2	108	Real	300	0	-	sp_T_2
+sp_T_3	110	Real	300	0	-	sp_T_3
+sp_T_4	112	Real	300	0	-	sp_T_4
+sp_T_5	114	Real	300	0	-	sp_T_5
+sp_T_6	116	Real	300	0	-	sp_T_6
+sp_L_1	118	Real	300	0	-	sp_L_1
+sp_L_2	120	Real	300	0	-	sp_L_2
+sp_L_3	122	Real	300	0	-	sp_L_3
+sp_L_4	124	Real	300	0	-	sp_L_4
+sp_L_5	126	Real	300	0	-	sp_L_5
+sp_L_6	128	Real	300	0	-	sp_L_6

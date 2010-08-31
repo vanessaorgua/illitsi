@@ -6,6 +6,7 @@
     <qresource prefix="/">
         <file>text/ap</file>
         <file>text/trend</file>
+	<file>ring.wav</file>
     </qresource>
 
 </RCC>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>262</width>
+    <width>294</width>
     <height>307</height>
    </rect>
   </property>
@@ -59,8 +59,8 @@ QFrame
      <widget class="QCheckBox" name="c2_h_">
       <property name="geometry">
        <rect>
-        <x>117</x>
-        <y>96</y>
+        <x>114</x>
+        <y>90</y>
         <width>16</width>
         <height>16</height>
        </rect>
@@ -180,8 +180,8 @@ QCheckBox:indicator
      <widget class="QCheckBox" name="c1_h_">
       <property name="geometry">
        <rect>
-        <x>98</x>
-        <y>88</y>
+        <x>95</x>
+        <y>82</y>
         <width>20</width>
         <height>32</height>
        </rect>
@@ -237,8 +237,8 @@ QCheckBox:indicator
      <widget class="QLCDNumber" name="lc_T">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>30</y>
+        <x>80</x>
+        <y>16</y>
         <width>41</width>
         <height>28</height>
        </rect>
@@ -343,9 +343,7 @@ QCheckBox:indicator
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="mnemo/mnemo.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>bnExit</sender>

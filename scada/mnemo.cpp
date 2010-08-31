@@ -12,6 +12,7 @@
 #include "dlgapone.h"
 #include "dlgtermctrl.h"
 
+#include "dlgalarm.h"
 
 Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(src)
 {
@@ -86,6 +87,7 @@ Mnemo::Mnemo(IoNetClient &src, QWidget *p) : QLabel(p), m_ui(new Ui::mnemo),s(sr
             << tr("Уварювання")
             << tr("Вивантаження");
 
+    connect(this,SIGNAL(signalAlarm()),this,SLOT(slotAlarm()));
 }
 
 Mnemo::~Mnemo()
@@ -107,6 +109,14 @@ void Mnemo::updateDataRaw()
     m_ui->pn_L_1->setValue(s[3]->getValueFloat("L_1"));
     m_ui->pn_L_2->setValue(s[3]->getValueFloat("L_2"));
     m_ui->pn_L_3->setValue(s[3]->getValueFloat("L_3"));
+
+    bool c=s[3]->getValueFloat("L_1")>90.0 || s[3]->getValueFloat("L_2")>90.0 ||  s[3]->getValueFloat("L_3")>90.0 ;
+/*
+    if(c && (!alm))
+    {
+        emit signalAlarm();
+    }
+    alm=c;*/
 
     m_ui->le_T_1->setText(QString("%1").arg(s[3]->getValueFloat("T_1"),3,'f',0));
     m_ui->le_T_2->setText(QString("%1").arg(s[3]->getValueFloat("T_2"),3,'f',0));
@@ -164,3 +174,12 @@ void Mnemo::slotCallTermCtrl()
     p.setWindowTitle(QString(tr("Збірник №%1")).arg(sender()->objectName().right(1)));
     p.exec();
 }
+
+
+void Mnemo::slotAlarm()
+{
+    DlgAlarm p(this);
+    p.exec();
+}
+
+

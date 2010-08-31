@@ -28,6 +28,10 @@ public slots:
     void updateTrend();
     void slotCallDlgApOne();
     void slotCallTermCtrl();
+    void slotAlarm();
+
+signals:
+    void signalAlarm();
 
 private:
     Ui::mnemo *m_ui;
@@ -36,7 +40,9 @@ private:
     QVector<ApOne*> ap;
     QVector<TrendChart*> trc;
 
+
     QStringList state;
+    bool alm;
 };
 
 #endif
