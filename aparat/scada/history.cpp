@@ -17,6 +17,9 @@ RHistorySelect::RHistorySelect(IoDev &src,struct trendinfo *tp,QWidget *p /*=NUL
     connect(m_ui->ap_20ap,SIGNAL(clicked()),this,SLOT(slotAccept()));
     connect(m_ui->ap_30ap,SIGNAL(clicked()),this,SLOT(slotAccept()));
     connect(m_ui->trend0trend,SIGNAL(clicked()),this,SLOT(slotAccept()));
+    connect(m_ui->trend0sir1,SIGNAL(clicked()),this,SLOT(slotAccept()));
+    connect(m_ui->trend0sir2,SIGNAL(clicked()),this,SLOT(slotAccept()));
+    connect(m_ui->trend0whs,SIGNAL(clicked()),this,SLOT(slotAccept()));
 }
 
 RHistorySelect::~RHistorySelect()

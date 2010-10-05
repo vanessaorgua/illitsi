@@ -111,6 +111,27 @@
           </widget>
          </item>
          <item>
+          <widget class="QPushButton" name="trend0sir1">
+           <property name="text">
+            <string>Сироп №1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="trend0sir2">
+           <property name="text">
+            <string>Сироп №2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="trend0whs">
+           <property name="text">
+            <string>Біла патока</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="verticalSpacer_3">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
