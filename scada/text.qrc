@@ -6,6 +6,9 @@
     <qresource prefix="/">
         <file>text/ap</file>
         <file>text/trend</file>
+        <file>text/sir1</file>
+        <file>text/sir2</file>
+        <file>text/whs</file>
 	<file>ring.wav</file>
     </qresource>
 

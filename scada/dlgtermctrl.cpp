@@ -57,7 +57,7 @@ void DlgTermCtrl::updateData()
 
     ui->lc_T->display((int)src.getValueFloat(QString("T_%1").arg(n)));
     ui->c1_h_->setChecked(src.getValue16(QString("h_%1").arg(n)));
-    ui->c2_h_->setChecked(src.getValue16(QString("h_%1").arg(1)));
+    ui->c2_h_->setChecked(src.getValue16(QString("h_%1").arg(n)));
 
 }
 
