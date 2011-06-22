@@ -116,14 +116,17 @@ void DlgApSetup::changeEvent(QEvent *e)
     {
         src.sendValue(sender()->objectName().right(sender()->objectName().size()-3),qint16(v));
     }
+    src.sendValue("Save",qint16(-1));
  }
 
 void DlgApSetup::slotSetValue(double v)
 {
     src.sendValue(sender()->objectName().right(sender()->objectName().size()-3),v);
+    src.sendValue("Save",qint16(-1));
 }
 
 void DlgApSetup::slotSetBalue()
 {
     src.sendValue("rej",qint16(sender()->objectName().right(1).toInt()));
+    src.sendValue("Save",qint16(-1));
 }

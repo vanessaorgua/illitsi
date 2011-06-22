@@ -27,6 +27,7 @@ DlgApOne::DlgApOne(IoDev &source,QWidget *parent) :
     connect(ui->bnGrowth_3,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnGrowth_4,SIGNAL(clicked()),this,SLOT(slotCommand()));
     connect(ui->bnClasp,SIGNAL(clicked()),this,SLOT(slotCommand()));
+    connect(ui->bx_prod,SIGNAL(currentIndexChanged(int)),this,SLOT(slotSendProd(int)));
 
     // заповнення хешу команд
 
@@ -173,3 +174,9 @@ void DlgApOne::updateData()
     ap->updateData(src);
 
 }
+
+void DlgApOne::slotSendProd(int v)
+{
+    src.sendValue("prod",qint16(v));
+}
+

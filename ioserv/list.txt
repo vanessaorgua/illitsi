@@ -77,4 +77,6 @@ Ti	317	Real	300	0	-	Ti
 Td	319	Real	300	0	-	Td
 Kor	321	Integer	300	0	-	Kor
 rej	322	Integer	300	0	-	Режим  вибору датчика
-mode	323	Bool	301	0	-	Алгоритм управління ростом
+mode	323	Bool	300	0	-	Алгоритм управління ростом
+prod	324	Integer	300	0	-	Вибір продукту
+Save	325	Bool	300	0	-

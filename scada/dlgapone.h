@@ -25,6 +25,7 @@ public slots:
     void slotCallSetup();
     void slotCommand();
     void slotSetKor(int v);
+    void slotSendProd(int v);
 
 protected:
     void changeEvent(QEvent *e);
