@@ -13,6 +13,7 @@ Q_IMPORT_PLUGIN(qsvg)
 int main(int argc,char **argv)
 {
     QApplication app(argc,argv);
+    QApplication::setStyle(new QPlastiqueStyle);
 
     QCoreApplication::setOrganizationName("Rabitsa");
     QCoreApplication::setApplicationName("aparat");
